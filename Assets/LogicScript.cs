@@ -9,6 +9,13 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
+    public PipeSpawnScript pipeSpawn;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        pipeSpawn = GameObject.FindGameObjectWithTag("PipeSpawn").GetComponent<PipeSpawnScript>();
+    }
 
     [ContextMenu("Increase score")]
     public void addScore(int scoreToAdd) 
@@ -24,6 +31,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        pipeSpawn.canSpawn = false;
         gameOverScreen.SetActive(true);
     }
 }
