@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Logic
   - PipeMove
-  - PipeSpwan
+  - PipeSpawn
   layers:
   - Default
   - TransparentFX

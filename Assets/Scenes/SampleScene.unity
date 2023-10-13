@@ -288,6 +288,7 @@ MonoBehaviour:
   playerScore: 0
   scoreText: {fileID: 1592177554}
   gameOverScreen: {fileID: 711127453}
+  pipeSpawn: {fileID: 0}
 --- !u!4 &368023793
 Transform:
   m_ObjectHideFlags: 0
@@ -510,7 +511,7 @@ GameObject:
   - component: {fileID: 531484048}
   m_Layer: 0
   m_Name: Pipe Spawner
-  m_TagString: Untagged
+  m_TagString: PipeSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,6 +531,7 @@ MonoBehaviour:
   pipe: {fileID: 2639662651567397401, guid: a9f4e9bdee15e844ea92e82757ae4922, type: 3}
   spawnRate: 3
   heightOffset: 15
+  canSpawn: 1
 --- !u!4 &531484049
 Transform:
   m_ObjectHideFlags: 0
