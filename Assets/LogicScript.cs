@@ -19,6 +19,7 @@ public class LogicScript : MonoBehaviour
         pipeSpawn = GameObject.FindGameObjectWithTag("PipeSpawn").GetComponent<PipeSpawnScript>();
         pipeMove = pipeSpawn.pipe.GetComponent<PipeMoveScript>();
         pipeMove.moveSpeed = 8;
+        pipeSpawn.spawnRate = 6;
     }
 
     [ContextMenu("Increase score")]
@@ -26,12 +27,6 @@ public class LogicScript : MonoBehaviour
     {
         playerScore += scoreToAdd;
         scoreText.text = playerScore.ToString();
-
-        if (playerScore != 0 && playerScore % 2 == 0) 
-        {
-            pipeMove.moveSpeed += 2;
-            pipeSpawn.spawnRate -= 0.2F;
-        }
     }
 
     public void restartGame()
@@ -47,7 +42,7 @@ public class LogicScript : MonoBehaviour
 
     void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && pipeSpawn.canSpawn)
             pauseGame();
     }
 
