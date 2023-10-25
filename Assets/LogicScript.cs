@@ -18,8 +18,8 @@ public class LogicScript : MonoBehaviour
     {
         pipeSpawn = GameObject.FindGameObjectWithTag("PipeSpawn").GetComponent<PipeSpawnScript>();
         pipeMove = pipeSpawn.pipe.GetComponent<PipeMoveScript>();
-        pipeMove.moveSpeed = 8;
-        pipeSpawn.spawnRate = 6;
+        pipeMove.moveSpeed = 20;
+        pipeSpawn.spawnRate = 2;
     }
 
     [ContextMenu("Increase score")]
