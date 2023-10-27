@@ -9,6 +9,8 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
+    public AudioSource flyAudio;
+    public AudioSource gameOverAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +30,14 @@ public class BirdScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
-            birdBody.velocity = Vector2.up * flapStrength;   
+            birdBody.velocity = Vector2.up * flapStrength;  
+            flyAudio.Play(); 
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        gameOverAudio.Play();
         logic.gameOver();
         birdIsAlive = false;
     }
