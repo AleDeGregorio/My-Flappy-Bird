@@ -1192,8 +1192,8 @@ MonoBehaviour:
   flapStrength: 80
   logic: {fileID: 0}
   birdIsAlive: 1
-  flyAudio: {fileID: 0}
-  gameOverAudio: {fileID: 0}
+  flyAudio: {fileID: 1703832491}
+  gameOverAudio: {fileID: 2059106283}
 --- !u!58 &903441958
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1915,7 +1915,7 @@ GameObject:
   - component: {fileID: 2059106284}
   - component: {fileID: 2059106283}
   m_Layer: 0
-  m_Name: gameOver-audio
+  m_Name: Game Over Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
